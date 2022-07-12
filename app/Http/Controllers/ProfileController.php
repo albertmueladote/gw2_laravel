@@ -8,7 +8,6 @@ class ProfileController extends Controller
 {
     public function Profile()
     {
-        echo "HOLA";
-        //return view('profile');
+        return view('profile');
     }
 }

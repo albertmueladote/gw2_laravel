@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+@font-face {
+  font-family: "Acumin Pro Condensed";
+  src: url("//db.onlinewebfonts.com/t/9d98f534f006d8c613a5dc3ace7fe507.eot");
+  src: url("//db.onlinewebfonts.com/t/9d98f534f006d8c613a5dc3ace7fe507.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/9d98f534f006d8c613a5dc3ace7fe507.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/9d98f534f006d8c613a5dc3ace7fe507.woff") format("woff"), url("//db.onlinewebfonts.com/t/9d98f534f006d8c613a5dc3ace7fe507.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/9d98f534f006d8c613a5dc3ace7fe507.svg#Acumin Pro Condensed") format("svg"); }
+form.profile {
+  border: 1px solid black; }
+
+/*# sourceMappingURL=profile.css.map */

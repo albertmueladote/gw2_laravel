@@ -1,9 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\GuildController;
 use App\Http\Controllers\GuildsController;
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,13 +17,17 @@ use App\Http\Controllers\ProfileController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::namespace('gw2')->middleware('UserSession')->group(function(){
+    Route::get('/', [UserController::class, 'view']);
+    Route::get('/clanes', [GuildController::class, 'viewGuilds']);
+    Route::get('/clan/{url}', [GuildController::class, 'viewGuild']);
 });
 
-Route::get('/guild/{id}', [GuildController::class, 'guild']);
-Route::get('/guilds', [GuildsController::class, 'guilds']);
-Route::get('/profile', [ProfileController::class, 'profile']);
+Route::post('login_user', [UserController::class, 'Login']);
+Route::post('logout_user', [UserController::class, 'Logout']);
+
+Auth::routes();
+
 
 /**
  * We can call first some middleware with this:
